@@ -36,6 +36,7 @@ Steps to install CUDA on Ubuntu 16.04 (LTS) and configuring NVIDIA Graphics Card
   sudo nano /etc/modprobe.d/blacklist-nouveau.conf
   ```
   * Add the following lines:
+  
     ```
     blacklist nouveau
     options nouveau modeset=0
