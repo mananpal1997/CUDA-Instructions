@@ -72,6 +72,7 @@ Steps to install CUDA on Ubuntu 16.04 (LTS) and configuring NVIDIA Graphics Card
   cat /proc/driver/nvidia/version
   nvcc -V
   ```
+  If you get error on 'nvcc -V', run ```sudo apt-get install nvidia-cuda-toolkit```
 13. Now you can switch back to normal mode. Run ```sudo service lightdm start```
 14. Check your gcc version ```gcc --version```. CUDA doesn't support gcc version > 5. So either you can install a lower version of gcc or do the following(works!):
   * ```sudo nano /usr/local/cuda/include/host_config.h```
