@@ -129,3 +129,12 @@ Steps to install CUDA on Ubuntu 16.04 (LTS) and configuring NVIDIA Graphics Card
     deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 8.0, CUDA Runtime Version = 8.0, NumDevs = 1, Device0 = GeForce 940MX
     Result = PASS
   ```
+
+## Install CUDNN (from https://developer.nvidia.com/rdp/cudnn-download)
+
+Download cuDNN v5.1 Library for Linux, extract it, and navigate to the location in terminal
+  ```
+  sudo cp -P cuda/include/cudnn.h /usr/local/cuda/include
+  sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda/lib64
+  sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+  ```
