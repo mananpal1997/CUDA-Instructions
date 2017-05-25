@@ -53,7 +53,7 @@ Steps to install CUDA on Ubuntu 16.04 (LTS) and configuring NVIDIA Graphics Card
   ```
   sudo service lightdm stop
   ```
-10. Run the following commands. (Flag "--no-opengl-files" is necessary otherwise you will get stuck in a login loop forever !)
+10. Run the following commands. (Flag "--no-opengl-files" is necessary otherwise you will get stuck in a login loop forever !). <b>If you get this error ```ERROR: Unable to load the 'nvidia-drm' kernel module.```, try turning secure boot off in the BIOS settings.</b>
 
   ```
   sudo ./NVIDIA-Linux-x86_64-367.48.run --no-opengl-files
@@ -73,7 +73,9 @@ Steps to install CUDA on Ubuntu 16.04 (LTS) and configuring NVIDIA Graphics Card
   nvcc -V
   ```
   If you get error on 'nvcc -V', run ```sudo apt-get install nvidia-cuda-toolkit```
+
 13. Now you can switch back to normal mode. Run ```sudo service lightdm start```
+
 14. Check your gcc version ```gcc --version```. CUDA doesn't support gcc version > 5. So either you can install a lower version of gcc or do the following(works!):
   * ```sudo nano /usr/local/cuda/include/host_config.h```
   * Comment out the line 119 (//#error -- unsupported GNU version! gcc versions later than 5 are not supported!)
